@@ -12,9 +12,12 @@ public class Manager extends Employee {
 	
 	public void calculateTransportAllowance() {
 		double transportAllowance = 15 * super.basicSalary /100;
-		
+		double salary = basicSalary + (basicSalary * specialAllowance/100) + (basicSalary * Hra/100) + transportAllowance;
 		//Display transportAllowance
-		display(transportAllowance);
+		//display(transportAllowance);
+		
+		//Displaying salary by adding transport allowance
+		display("Salary is salary  + transportation allowance (" + transportAllowance + ") = " + (salary));
 	}
 
 }

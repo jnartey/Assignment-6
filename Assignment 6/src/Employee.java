@@ -24,6 +24,10 @@ public class Employee {
 		System.out.println(value);
 	}
 	
+	public void display(String message) {
+		System.out.println(message);
+	}
+	
 	public void calculateSalary() {
 		double salary = basicSalary + (basicSalary * specialAllowance/100) + (basicSalary * Hra/100);
 		
@@ -33,9 +37,12 @@ public class Employee {
 	
 	public void calculateTransportAllowance() {
 		double transportAllowance = 10 * basicSalary/100;
-		
+		double salary = basicSalary + (basicSalary * specialAllowance/100) + (basicSalary * Hra/100) + transportAllowance;
 		//Display transportAllowance
-		display(transportAllowance);
+		//display(transportAllowance);
+		
+		//Displaying salary by adding transport allowance
+		display("Salary is salary  + transportation allowance (" + transportAllowance + ") = " + (salary));
 	}
 
 }
